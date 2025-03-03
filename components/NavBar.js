@@ -1,25 +1,31 @@
-import { useEffect, useState } from "react";
+  import { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 
-  export const NavBar = () => {
-  const [activeLink, setActiveLink] = useState('home');
-  const [scrolled, setScrolled] = useState(false);
+    export const NavBar = () => 
+    {
+    const [activeLink, setActiveLink] = useState('home');
+    const [scrolled, setScrolled] = useState(false);
   
-  useEffect{() => {
-    const onScroll = () => {
-      if (window.scrollY > 50){
+    useEffect(() => 
+    {
+    const onScroll = () => 
+      {
+      if (window.scrollY > 50)
+        {
         setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  }
-  window.addEventListener("scroll", onScroll);
+        } else 
+          {
+        setScrolled(false);
+        }
+      }
 
-  return () => window.removeEventListener("scroll", onScroll);
-  }
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+    }, [])
 
           return (
-            <Navbar expand="lg" className={"scrolled ? "scrolled": ""}>
+            <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
               <Container>
                 <Navbar.Brand href="#home">
                     <img src ={} alt = "Logo"/>
@@ -28,13 +34,15 @@ import { Container, Nav, Navbar } from "react-bootstrap";
                     <span className="navbar-toggler-icon"></span>
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
-                  <Nav className="me-auto">
-                    <Nav.Link href="#Home">Home</Nav.Link>
-                    <Nav.Link href="#Skills">Skills</Nav.Link>
-                    <Nav.Link href="#Projects">Projects</Nav.Link>
-                    <Nav.Link href="#Other">Other</Nav.Link>
-                    <Nav.Link href="#About">About</Nav.Link>
+
+                  <Nav className="ms-auto">
+                  <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+                  <Nav.Link href="#about-me" className={activeLink === 'about-me' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about-me')}>About Me</Nav.Link>
+                  <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
+                  <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+                  <Nav.Link href="#other" className={activeLink === 'other' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('other')}></Nav.Link>
                   </Nav>
+
                   <span className="navbar-text">
                     <div className="social-icon">
                         <a href="#"><img src={navIcon1} alt="" /></a>
@@ -45,6 +53,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
                       <span>Let's connect</span>
                     </button>
                     </span>
+                    
                 </Navbar.Collapse>
               </Container>
             </Navbar>
