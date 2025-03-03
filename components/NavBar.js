@@ -1,5 +1,10 @@
-  import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import logo from '../assets/images/logo.png';
+import navIcon1 from '../assets/images/navIcon1.png';
+import navIcon2 from '../assets/images/navIcon2.png';
+import navIcon3 from '../assets/images/navIcon3.png';
+
 
     export const NavBar = () => 
     {
@@ -24,11 +29,15 @@ import { Container, Nav, Navbar } from "react-bootstrap";
     return () => window.removeEventListener("scroll", onScroll);
     }, [])
 
+    const onUpdateActiveLink = (value) => 
+      {
+      setActiveLink(value); 
+      }
           return (
             <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
               <Container>
                 <Navbar.Brand href="#home">
-                    <img src ={} alt = "Logo"/>
+                    <img src ={logo} alt = "Logo"/>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggler-icon"></span>
@@ -53,7 +62,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
                       <span>Let's connect</span>
                     </button>
                     </span>
-                    
+
                 </Navbar.Collapse>
               </Container>
             </Navbar>
