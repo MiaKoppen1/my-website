@@ -4,21 +4,21 @@
 @font-face 
   {
 	font-family: Bacalisties;
-	src: url('C:\Users\user\Desktop\Personal\reactPortfolioSite\my-website\fonts\bacalisties-font');
+	src: url('my-website\src\assets\fonts\bacalisties-font');
 	font-weight: 700;
   }
 
 @font-face 
   {
 	font-family: Anzelia;
-	src: url('C:\Users\user\Desktop\Personal\reactPortfolioSite\my-website\fonts\cs-anzelia-font');
+	src: url('my-website\src\assets\fonts\cs-anzelia-font');
 	font-weight: 700;
   }
 
 @font-face 
   {
 	font-family: San-Guru;
-	src: url('C:\Users\user\Desktop\Personal\reactPortfolioSite\my-website\fonts\sang-guru-font');
+	src: url('my-website\src\assets\fonts\sang-guru-font');
 	font-weight: 700;
   }
 
