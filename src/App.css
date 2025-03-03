@@ -1,5 +1,5 @@
 
-/*            custom fonts             */
+/*                                                                         Custom fonts                                                                             */
 
 @font-face 
   {
@@ -22,7 +22,7 @@
 	font-weight: 700;
   }
 
-/*            Default CSS             */
+/*                                                                         Default CSS                                                                              */
 
 * {
   margin: 0;
@@ -102,7 +102,7 @@ p.danger
 	color: red;
   }
 
-/*            NavBar CSS            */
+/*                                                                           NavBar CSS                                                                                 */
 
 .App {
   text-align: center;
