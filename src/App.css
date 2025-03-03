@@ -1,3 +1,29 @@
+
+/*            custom fonts             */
+
+@font-face 
+  {
+	font-family: Bacalisties;
+	src: url('C:\Users\user\Desktop\Personal\reactPortfolioSite\my-website\fonts\bacalisties-font');
+	font-weight: 700;
+  }
+
+@font-face 
+  {
+	font-family: Anzelia;
+	src: url('C:\Users\user\Desktop\Personal\reactPortfolioSite\my-website\fonts\cs-anzelia-font');
+	font-weight: 700;
+  }
+
+@font-face 
+  {
+	font-family: San-Guru;
+	src: url('C:\Users\user\Desktop\Personal\reactPortfolioSite\my-website\fonts\sang-guru-font');
+	font-weight: 700;
+  }
+
+/*            Default CSS             */
+
 .App {
   text-align: center;
 }
